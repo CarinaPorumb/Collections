@@ -1,12 +1,17 @@
 # Java Collections
 
-## List Data Structures:
+## List Data Structures
 
-### 1. List:
+### 1. List
+
+<details>
+<summary>Click to expand</summary>
 
 A list is an ordered collection that allows duplicate elements. Different implementations offer various features:
 
-#### ArrayList
+<details>
+<summary><strong>ArrayList</strong></summary>
+
 - **Description**: A dynamic array offering fast random access and efficient iteration. It's a resizable-array implementation of the List interface.
 - **Unique Features**:
   - Fast random access.
@@ -15,17 +20,23 @@ A list is an ordered collection that allows duplicate elements. Different implem
   - When frequent read operations are required.
   - When additions and deletions are infrequent and mostly at the end of the list.
 
-  
-#### LinkedList
+</details>
+
+<details>
+<summary><strong>LinkedList</strong></summary>
+
 - **Description**: A doubly-linked list optimized for efficient insertions and deletions. It implements the List and Deque interfaces, allowing it to be used as both a list and a queue.
 - **Unique Features**:
   - Efficient Insertions/Deletions: More efficient for insertions and deletions, as it doesn't require shifting elements.
-
 - **Ideal Use Cases**:
   - When frequent insertions and deletions are involved, especially at the beginning or in the middle of the list.
   - When the list size is large and changes frequently, especially if the changes are not just at the end but also at the beginning or in the middle.
 
-#### Vector
+</details>
+
+<details>
+<summary><strong>Vector</strong></summary>
+
 - **Description**: Similar to ArrayList, but with synchronized methods to ensure thread safety. However, due to its synchronized nature, it might have performance drawbacks compared to ArrayList.
 - **Unique Features**:
   - Synchronized methods for thread safety.
@@ -36,8 +47,11 @@ A list is an ordered collection that allows duplicate elements. Different implem
 - **Stack**: This class extends Vector and provides LIFO (Last-In-First-Out) behavior. It's considered deprecated in favor of more robust alternatives like Deque.
 
 - **CopyOnWriteArrayList**: A thread-safe variant of ArrayList. It's suitable for concurrent access, especially in scenarios with infrequent modifications but frequent iterations or reads.
+</details>
 
-#### Stack
+<details>
+<summary><strong>Stack</strong></summary>
+
 - **Description**: Extends Vector to provide a LIFO (Last-In-First-Out) stack.
 - **Unique Features**:
   - Provides methods like `push()`, `pop()`, `peek()`, and `empty()`.
@@ -45,8 +59,11 @@ A list is an ordered collection that allows duplicate elements. Different implem
 - **Ideal Use Cases**:
   - When you need a simple LIFO data structure.
   - Note: It's considered deprecated in favor of Deque implementations.
+</details>
 
-#### CopyOnWriteArrayList
+<details>
+<summary><strong>CopyOnWriteArrayList</strong></summary>
+
 - **Description**: A thread-safe variant of ArrayList, suitable for concurrent access with infrequent modifications.
 - **Unique Features**:
   - Thread-safe without explicit synchronization.
@@ -55,7 +72,9 @@ A list is an ordered collection that allows duplicate elements. Different implem
   - In multi-threaded environments where reads are much more frequent than writes.
   - Where thread safety is a priority, and you can afford the cost of copying the list on each write operation.
 
-  
+</details>
+</details>
+
 ---
 
 ### 2. Set
