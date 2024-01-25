@@ -6,7 +6,7 @@ import java.util.List;
 public class ArrayListExample {
     public static void main(String[] args) {
 
-        List<String> colours = new ArrayList<>();
+        ArrayList<String> colours = new ArrayList<>();
         colours.add("Purple");
         colours.add("White");
         colours.add("Yellow");
@@ -18,6 +18,7 @@ public class ArrayListExample {
 
         //Inserting "Fuchsia" at the 4th position (index 3)
         colours.add(3, "Fuchsia");
+        colours.addFirst("Gray");
         System.out.println(colours);
 
         // Replacing the element at index 4 with "White"
@@ -25,14 +26,21 @@ public class ArrayListExample {
         System.out.println(colours);
         System.out.println();
 
-        List<String> colours2 = new ArrayList<>();
+        ArrayList<String> colours2 = new ArrayList<>();
         colours2.add("Red");
         colours2.add("Blue");
         colours2.add("Yellow");
         colours2.add("Green");
+        colours2.add("Black");
         colours2.remove(2);
+        colours2.remove("Black");
         System.out.println(colours2);
         System.out.println();
+
+
+        // Retain only the common elements between the two lists
+        colours.retainAll(colours2);
+        System.out.println(STR."List after retaining common elements: \{colours}");
 
 
         // Creating a List of Lists:
@@ -77,7 +85,6 @@ public class ArrayListExample {
         System.out.println(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
 
 
-
         //Trim Elements: Create new list with trimmed elements
         List<String> listToTrim = new ArrayList<>();
         listToTrim.add("  Purple ");
@@ -86,6 +93,7 @@ public class ArrayListExample {
         listToTrim.add("    Black ");
         System.out.println(STR."Original List1: \{listToTrim}");
 
+
         //Trimming elements and adding them to a new list in one go
         List<String> trimList = new ArrayList<>();
         for (String elem : listToTrim) {
@@ -93,6 +101,7 @@ public class ArrayListExample {
         }
         System.out.println(STR."Trimmed List: \{trimList}");
         System.out.println();
+
 
         //Trimming elements, adding them to a new list, and printing after each addition
         List<String> trimList2 = new ArrayList<>();

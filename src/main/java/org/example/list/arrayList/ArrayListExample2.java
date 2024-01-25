@@ -7,13 +7,13 @@ import java.util.List;
 public class ArrayListExample2 {
     public static void main(String[] args) {
 
-        List<String> colours = new ArrayList<>();
+        ArrayList<String> colours = new ArrayList<>();
         colours.add("Purple");
         colours.add("White");
         colours.add("Yellow");
         colours.add("Black");
 
-        List<String> colours2 = new ArrayList<>();
+        ArrayList<String> colours2 = new ArrayList<>();
         colours2.add("Purple");
         colours2.add("White");
         colours2.add("Fuchsia");
@@ -39,6 +39,7 @@ public class ArrayListExample2 {
         System.out.println();
 
 
+
         //Appending new elements at the end of the 'colours' list
         int number = 3;
         for (int i = 1; i <= number; i++) {
@@ -46,6 +47,7 @@ public class ArrayListExample2 {
         }
         System.out.println(STR."Updated 'colours' list after appending numbers: \{colours}");
 
+        colours.addLast("Fuchsia");
 
 
         System.out.println(STR."Last index of Yellow: \{colours.lastIndexOf("Yellow")}");
