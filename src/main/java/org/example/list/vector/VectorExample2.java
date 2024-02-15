@@ -7,7 +7,7 @@ public class VectorExample2 {
 
 
         Vector<String> colours = new Vector<>();
-        colours.ensureCapacity(5); //default is 10
+        colours.ensureCapacity(10); //default is 10
         System.out.println(STR."Capacity of vector: \{colours.capacity()}");
         colours.add("Purple");
         colours.add("White");

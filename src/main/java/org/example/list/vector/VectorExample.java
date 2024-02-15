@@ -11,12 +11,11 @@ public class VectorExample {
         colours.add("White");
         colours.add("Black");
         colours.add("Turquoise");
-        colours.addElement("Yellow"); // Similar to add()
-        colours.removeElement("Black"); // Similar to remove()
+        colours.addElement("Yellow");
+        colours.removeElement("Black");
         System.out.println(colours);
 
         //  add() is part of the Java Collections Framework. It's defined in the List interface and implemented by Vector
-
         // addElement() is a legacy method from the original Vector class, predating the Collections Framework
         // Its behavior is similar to add, but it's synchronized for thread safety.
 
