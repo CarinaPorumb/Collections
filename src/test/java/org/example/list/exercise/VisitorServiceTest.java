@@ -1,5 +1,8 @@
 package org.example.list.exercise;
 
+import org.example.model.Castle;
+import org.example.model.Visitor;
+import org.example.model.VisitorService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

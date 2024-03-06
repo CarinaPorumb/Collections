@@ -1,16 +1,15 @@
-package org.example.list.exercise;
+package org.example.model;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Getter
 @Setter
-@ToString
+
 @RequiredArgsConstructor
 public class Visitor {
 
@@ -41,6 +40,11 @@ public class Visitor {
         int result = firstName.hashCode();
         result = 31 * result + lastName.hashCode();
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s", this.firstName, this.lastName);
     }
 
 }
