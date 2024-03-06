@@ -1,5 +1,7 @@
 package org.example.list.exercise;
 
+import org.example.model.Castle;
+import org.example.model.CastleService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

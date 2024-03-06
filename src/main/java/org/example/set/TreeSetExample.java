@@ -9,11 +9,11 @@ public class TreeSetExample {
 
     public static void main(String[] args) {
 
-        List<Integer> numbers = Arrays.asList(50, 150, 250, 100, 300, 200);
+        List<Integer> numbers = Arrays.asList(50, 150, 250, 100, 300, 200, 50, 150, 200);
 
         NavigableSet<Integer> numberTree = new TreeSet<>(numbers);
 
-        // numberTree.forEach(System.out::println);
+        System.out.println(STR. "\{numberTree} ");
 
         // numberTree.descendingSet().forEach(System.out::println);
 
