@@ -1,42 +1,33 @@
 package org.project.collection.list.vector;
 
-import java.util.Enumeration;
 import java.util.Vector;
 
 public class VectorExample {
     public static void main(String[] args) {
 
-        Vector<String> colours = new Vector<>();
-        colours.add("Purple");
-        colours.add("White");
-        colours.add("Black");
-        colours.add("Turquoise");
-        colours.addElement("Yellow");
-        colours.removeElement("Black");
-        System.out.println(colours);
+        Vector<String> vector = new Vector<>();
 
-        //  add() is part of the Java Collections Framework. It's defined in the List interface and implemented by Vector
-        // addElement() is a legacy method from the original Vector class, predating the Collections Framework
-        // Its behavior is similar to add, but it's synchronized for thread safety.
+        Thread thread1 = new Thread(() -> {
+            vector.add("Element 1");
+            vector.add("Element 2");
+        });
 
+        Thread thread2 = new Thread(() -> {
+            vector.add("Element 3");
+            vector.add("Element 4");
+        });
 
-        Enumeration<String> colour = colours.elements();
-        while (colour.hasMoreElements()) {
-            System.out.print(STR." \{colour.nextElement()}");
+        thread1.start();
+        thread2.start();
+
+        try {
+            thread1.join();
+            thread2.join();
+        } catch (InterruptedException e) {
+            System.out.println(STR."Thread was interrupted unexpectedly: \{e.getMessage()}");
         }
-        System.out.println();
 
-
-        System.out.println(STR."First element: \{colours.firstElement()} \nLast element: \{colours.lastElement()}");
-
-
-        // Retrieves an element at a specific index
-        String colourAtIndex = colours.elementAt(1);
-        System.out.println(STR."Element at index 1: \{colourAtIndex}");
-
-        // Replacing an element at a specific index with a new element
-        colours.setElementAt("Yellow", 1);
-        System.out.println(STR."Updated vector: \{colours}");
-
+        System.out.println(STR."Vector contents: \{vector}");
     }
+
 }
