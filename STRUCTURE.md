@@ -199,7 +199,7 @@ Different implementations offer various features:
 
 ---
 
-### 3. Queue and Deque
+### 3. Queue & Deque (Double Ended Queue)
 
 <details>
 <summary>More info</summary>
@@ -211,7 +211,7 @@ A **Deque** (Double-Ended Queue) extends the Queue interface, supporting element
 Different implementations offer various features:
 
 <details>
-<summary><strong>More info</strong></summary>
+<summary><strong>LinkedList</strong></summary>
 
 - **Description**: LinkedList is a Java collection class that implements the Deque interface in addition to the List interface. This dual implementation makes it a versatile double-ended queue, enabling elements to be added or removed
   from both the front and the back. This capability makes it extremely versatile for a range of data handling scenarios, especially where FIFO (First-In-First-Out) and LIFO (Last-In-First-Out) operations are needed.
@@ -227,11 +227,6 @@ Different implementations offer various features:
   - Ideal for applications that require dynamic modification of data with frequent additions or removals from either end.
   - Perfect for scenarios that necessitate queue functionality along with the added flexibility of stack operations, such as task scheduling and undo functionalities.
 </details>
-
-
-
-
-
 
 
 <details>
@@ -288,32 +283,28 @@ Different implementations offer various features:
 </details>
 
 
+### ToDo: Queue & Deque (Double Ended Queue)
+ 
+[//]: # (LinkedBlockingQueue)
+[//]: # (ConcurrentLinkedQueue)
+[//]: # (PriorityBlockingQueue)
+[//]: # (LinkedBlockingDeque)
+[//]: # (ConcurrentLinkedDeque)
 
+---
 
-### 3. Map
-[//]: # (   HashMap)
-[//]: # (   LinkedHashMap)
-[//]: # (   TreeMap)
-[//]: # (   Hashtable)
-[//]: # (   EnumMap)
-[//]: # (   ConcurrentHashMap)
-[//]: # (   WeakHashMap)
-[//]: # (   IdentityHashMap)
+### 4. Map
+[//]: # (HashMap)
+[//]: # (LinkedHashMap)
+[//]: # (TreeMap)
+[//]: # (Hashtable)
+[//]: # (EnumMap)
+[//]: # (ConcurrentHashMap)
+[//]: # (WeakHashMap)
+[//]: # (IdentityHashMap)
 
-### 4. Queue
-[//]: # (   LinkedList &#40;also a List&#41;)
-[//]: # (   PriorityQueue)
-[//]: # (   ArrayDeque &#40;also a Deque&#41;)
-[//]: # (   ConcurrentLinkedQueue)
-[//]: # (   LinkedBlockingQueue)
-[//]: # (   PriorityBlockingQueue)
+---
 
-### 6. Deque (Double Ended Queue)
-[//]: # (   ArrayDeque)
-[//]: # (   LinkedList)
-[//]: # (   LinkedBlockingDeque)
-[//]: # (   ConcurrentLinkedDeque)
-
-### 10. Concurrent Collections
-[//]: # (    ConcurrentSkipListMap)
-[//]: # (    CopyOnWriteArraySet)
+### 5. Concurrent Collections
+[//]: # (ConcurrentSkipListMap)
+[//]: # (CopyOnWriteArraySet)
