@@ -58,7 +58,10 @@ public class CastleService {
 
 
     public void applyDiscount(int discount) {
-        this.castles.forEach(castle -> castle.setEntranceFee(castle.getEntranceFee() - discount));
+        this.castles.forEach(castle -> {
+            int newFee = Math.max(0, castle.getEntranceFee() - discount);
+            castle.setEntranceFee(newFee);
+        });
     }
 
     public Collection<Castle> filterCastlesByMinimumDailyTour(int requiredDailyTour) {
